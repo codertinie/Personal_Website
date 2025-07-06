@@ -1,47 +1,118 @@
-/* styles.css or your styling file */
-header {
-  /* background-color: #333; */
-  color: #fff;
-  padding: 20px;
+/* Basic styles remain the same */
+.navbar {
+  width: 100%;
+  /* background: rgba(15, 32, 39, 0.95); */
+  color: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.logo {
+.navbar-logo {
   font-size: 24px;
   font-weight: bold;
+  color: #ff5722;
 }
 
-.cta-button a {
-  background-color: #ff5722;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+.navbar-links ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
   text-decoration: none;
-  transition: background-color 0.3s;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.cta-button a:hover {
+.navbar-links a:hover {
+  color: #ff5722;
+}
+
+.navbar-cta a {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar-cta a:hover {
   background-color: #e64a19;
 }
 
+/* Hides CTA on small screens */
+.desktop-only {
+  display: block;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger span.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger span.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    /* background-color: rgba(15, 32, 39, 0.98); */
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
