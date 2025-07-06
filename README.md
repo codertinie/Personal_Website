@@ -54,10 +54,10 @@ src/
 
 Want to collaborate or just say hi?
 
-- 📧 Email: your@email.com
+- 📧 Email: munyao25@gmail.com
 - 🌐 Website: [martindeveloper.vercel.app](https://martindeveloper.vercel.app)
 - 💼 LinkedIn: [@yourname](#)
-- 💻 GitHub: [@yourgithub](#)
+- 💻 GitHub: [@codertinie](https://github.com/codertinie/)
 
 ---
 
